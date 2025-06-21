@@ -14,7 +14,9 @@ namespace FibonacciApp
                 Console.WriteLine("2 - Factorial");
                 Console.WriteLine("3 - Find Dublicate String");
                 Console.WriteLine("4 - Find Dublicate String Array");
-                Console.WriteLine("5 - Exit");
+                Console.WriteLine("5 - LINQ - Filter all the employees whose salary is greater than 50000");
+                Console.WriteLine("6 - LINQ - Get All Employees Names in Upper case");
+                Console.WriteLine("55 - Exit");
                 Console.Write("Enter your choice: ");
 
                 string choice = Console.ReadLine();
@@ -38,9 +40,17 @@ namespace FibonacciApp
                         DuplicateStringArray Dsa = new DuplicateStringArray();
                         Dsa.FindDubStringArray();
                         break;
-
-
                     case "5":
+                        FilterSalary Fls = new FilterSalary();
+                        Fls.FilterSalaryGreater();
+                        break;
+                    case "6":
+                        AllEmpUpper UN = new AllEmpUpper();
+                        UN.UpperEmpName();
+                        break;
+
+
+                    case "55":
                         Console.WriteLine("Exiting program...");
                         return;
 
