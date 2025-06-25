@@ -16,6 +16,7 @@ namespace FibonacciApp
                 Console.WriteLine("4 - Find Dublicate String Array");
                 Console.WriteLine("5 - LINQ - Filter all the employees whose salary is greater than 50000");
                 Console.WriteLine("6 - LINQ - Get All Employees Names in Upper case");
+                Console.WriteLine("7 - LINQ - Medium Level");
                 Console.WriteLine("55 - Exit");
                 Console.Write("Enter your choice: ");
 
@@ -47,6 +48,10 @@ namespace FibonacciApp
                     case "6":
                         AllEmpUpper UN = new AllEmpUpper();
                         UN.UpperEmpName();
+                        break;
+                    case "7":
+                        MedLinq mLinq = new MedLinq();
+                        mLinq.GetValues();
                         break;
 
 
