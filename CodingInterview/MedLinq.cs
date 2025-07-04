@@ -142,8 +142,30 @@ Count = g.Count()
             {
                 Console.WriteLine($"Department : {item.Department} ,Employee Count : {item.EmpCount}");
             }
+          
+
+            //Integer array [2,4,4,3,5,6,2,3]return the dublictae string count
+
+            int[] arr= { 2, 4, 4, 3, 5, 6, 2, 3 };
+            var dublicatesCnt = arr
+                .GroupBy( x => x)
+                .Where(g => g.Count() > 1)
+                .Select(g => new { Number = g.Key, Count = g.Count() });
+            foreach(var item in dublicatesCnt)
+            {
+                Console.WriteLine($"{item.Number} and {item.Count}");
+            }
+
+            //Integer array [2,4,4,3,5,6,2,3]return the dublictae string count remove dub and return distinct
+            var Orgarr  = arr
+                .GroupBy(x => x)
+                .Where(g => g.Count() == 1)
+                .Select(g => new { Number = g.Key});
+            foreach ( var itemm in Orgarr)
+            {
+                Console.WriteLine($"{itemm.Number}");
+            }
             Console.ReadKey();
-            
         }
     }
     public class Employee1
